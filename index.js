@@ -15,12 +15,42 @@ app.use(bodyParser.json())
 
 app.get('/', function (req, res)
 {
-    console.log("plain GET request to be logged");
-    res.send('Hello Jaimie, I would like to be a chat bot')
+    console.log("plain GET request");
+    res.send('Hello Denis, I would like to be a chat bot')
 })
+
+// for Facebook verification
+app.get('/webhook', function (req, res)
+{
+    console.log("/webhook Verify Token");
+
+    // Facebook verification
+
+    console.log("Verify Token sent");
+    if (req.query['hub.mode'] === 'subscribe')
+    {
+        console.log("Subscribe Verify Token, check: " + req.query['hub.verify_token']);
+        if (req.query['hub.verify_token'] === 'YOUR_TOKEN')
+        {
+            console.log("Validating webhook");
+            res.send(req.query['hub.challenge'])
+        }
+        else
+        {
+            console.log("Oh No, invalid Verify Token: " + req.query['hub.verify_token']);
+            res.send("Error, wrong token.");
+        }
+    }
+    else
+    {
+        console.log("not subscribing");
+        res.send('Hello world')
+    }
+});
+
 
 // Spin up the server
 app.listen(app.get('port'), function()
-{   
+{
     console.log('running on port', app.get('port'))
 })

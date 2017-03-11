@@ -98,7 +98,13 @@ sendGenericMessage: function(toId)
               title: "Help Me Apply",
               payload: "help me apply",
             }]
-            },{
+            },
+            message: {
+      attachment: {
+        type: "template",
+        payload: {
+          template_type: "generic",
+          elements: [{
             title: "Bot Party",
             subtitle: "Bots for Messenger Challenge",
             item_url: "https://messengerchallenge.splashthat.com/",

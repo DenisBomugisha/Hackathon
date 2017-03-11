@@ -20,7 +20,7 @@ app.use(bodyParser.json())
 app.get('/', function (req, res)
 {
     console.log("plain GET request");
-    res.send('Hello World, I would like to be a chat bot')
+    res.send('Hello Denis, I would like to be a chat bot')
 })
 
 // for Facebook verification

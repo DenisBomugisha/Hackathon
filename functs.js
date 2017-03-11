@@ -1,6 +1,6 @@
 const request = require('request')
 
-const PAGE_ACCESS_TOKEN = "EAAKTalAQ2eoBEAXiFuMH3AZWarRff1dYSNSU9hTtAZxgXPkTarahOyXUH9wUxBZaTQacCZyyv24DRQAZsgD2u0L76EMSmz5zDJYbKAZH5ZCIBcNZALf2SNJS9mgVq0oSH56ZAoOFwf2PbFZCPCQmVgWqfDKhUXVSUqlVv2OWYKKEzVcAZDZD"
+const PAGE_ACCESS_TOKEN = process.env.FB_PAGE_ACCESS_TOKEN
 
 module.exports = {
 receivedMessage: function(event)

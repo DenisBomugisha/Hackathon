@@ -114,7 +114,7 @@ sendGenericMessage: function(toId)
               payload: "Payload for Please do something for me bubble",
             }],
             }]
-        }
+        
       }
     }
   };

@@ -98,7 +98,7 @@ sendGenericMessage: function(toId)
               title: "Help Me Apply",
               payload: "help me apply",
             }]
-            },[{
+            ,{
             title: "Bot Party",
             subtitle: "Bots for Messenger Challenge",
             item_url: "https://messengerchallenge.splashthat.com/",
@@ -114,7 +114,7 @@ sendGenericMessage: function(toId)
               payload: "Payload for Please do something for me bubble",
             }],
             }]
-        
+        }
       }
     }
   };

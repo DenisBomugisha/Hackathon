@@ -20,7 +20,10 @@ app.use(bodyParser.json())
 app.get('/', function (req, res)
 {
     console.log("plain GET request");
-    res.send('Hello Denis, I would like to be a chat bot')
+    var jsonResponse = [];
+    jsonResponse.push({ "text": "Hi. " + (Math.random() * 5 + 1).toFixed(0) + " is a lucky number..." });
+    res.send(jsonResponse);
+    //res.send('Hello Denis, I would like to be a chat bot')
 })
 
 // for Facebook verification
